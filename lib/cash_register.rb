@@ -13,9 +13,8 @@ class CashRegister
     quantity.times do
       self.item_list << item
     end
-    trans_total += price * quantity
-    self.last_transaction += trans_total
-    self.total = trans_total
+    self.total += price * quantity
+    self.last_transaction += self.total
     
   end
   
